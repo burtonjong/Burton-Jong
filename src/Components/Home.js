@@ -7,9 +7,8 @@ export default function Home() {
     <>
       <div className="container spacer layer1">
         <div className="container-content">
-          <div className="container-left">
-            <Title />
-          </div>
+          <div className="container-left"></div>
+
           <div className="container-right">
             <Links />
             <Experience />

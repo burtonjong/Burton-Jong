@@ -103,6 +103,13 @@ p {
   opacity: 0.5;
 }
 
+.btn-1 {
+  background-color: transparent;
+  border: none;
+  background: none;
+  color: #f4eeff;
+}
+
 .icon-links-ul {
   display: flex;
   justify-content: center;
