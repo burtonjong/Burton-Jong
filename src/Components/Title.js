@@ -17,7 +17,7 @@ export default function Title() {
         <img
           src={profile}
           alt="profile"
-          className="profile animate fade-up slow-3"
+          className="profile animate fade-up slow-5"
         />
       </div>
     </div>

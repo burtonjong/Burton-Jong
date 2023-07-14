@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Experience from "./Expereience";
+import Experience from "./Experience";
 
 export default function App() {
   return (
