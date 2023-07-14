@@ -1,7 +1,8 @@
 export default function Experience() {
   return (
-    <div className="spacer layer2">
-      <section></section>
+    <div className="container">
+      <div className="links"></div>
+      <div></div>
     </div>
   );
 }
