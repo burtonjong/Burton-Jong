@@ -30,6 +30,17 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
   }
 }
 
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(75px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
 .animate {
   animation-duration: 0.3s;
   animation-fill-mode: both;
@@ -63,6 +74,10 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 
 .fade-down {
   animation-name: fade-down;
+}
+
+.slide-in-right {
+  animation-name: slide-in-right;
 }
 
 /* Main Styling */
@@ -154,6 +169,18 @@ p {
   margin: 1rem 0 1rem 0;
 }
 
+.spacer {
+  aspect-ratio: 960/540;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("./layer1.svg");
+}
+
 /* Utility Classes */
 
 .mt-0 {
@@ -182,4 +209,10 @@ p {
 
 .fd-column {
   flex-direction: column;
+}
+
+.underlined {
+  text-decoration: underline;
+  text-decoration-color: #f4eeff;
+  text-decoration-thickness: 0.2rem;
 }
