@@ -1,13 +1,22 @@
 /*
 Main body colors
-#F4EEFF
-#DCD6F7
-#A6B1E1
-#424874
+#BBE1FA
+#3282B8
+#0F4C75
+#0c192c
 https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 */
 
 /* Animation */
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes fade-up {
   0% {
     opacity: 0;
@@ -41,9 +50,24 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
   }
 }
 
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
 .animate {
-  animation-duration: 0.3s;
+  animation-duration: 5s;
   animation-fill-mode: both;
+}
+
+.fast-1 {
+  animation-duration: 1s;
 }
 
 .slow-1 {
@@ -68,6 +92,10 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
   animation-duration: 1.7s;
 }
 
+.slow-8 {
+  animation-duration: 3s;
+}
+
 .fade-up {
   animation-name: fade-up;
 }
@@ -80,11 +108,15 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
   animation-name: slide-in-right;
 }
 
+.fade {
+  animation-name: fade;
+}
+
 /* Main Styling */
 
 body {
+  padding: 0;
   margin: 0;
-  background-color: #424874;
   font-family: "Source Code Pro", monospace;
 }
 
@@ -123,11 +155,49 @@ p {
   margin-right: 1rem;
 }
 
-.container {
-  display: flex;
-  align-content: flex-start;
+.container-stay {
   height: 100vh;
-  width: 100%;
+  background-color: #0c192c;
+}
+.container-fade {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  animation: wheel 2s linear infinite;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background: black;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  border-radius: 50%;
+  z-index: 1000;
+  z-index: 1;
+  filter: blur(30px);
 }
 
 .container-content {
@@ -135,7 +205,7 @@ p {
   justify-content: center;
   gap: 10%;
   width: 100%;
-  padding: 5% 15% 10% 15%;
+  padding: 10% 15% 10% 15%;
 }
 
 .container-left {
