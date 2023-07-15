@@ -62,7 +62,7 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 }
 
 .animate {
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-fill-mode: both;
 }
 
@@ -71,29 +71,10 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 }
 
 .slow-1 {
-  animation-duration: 0.5s;
-}
-.slow-2 {
-  animation-duration: 0.7s;
-}
-.slow-3 {
-  animation-duration: 0.9s;
-}
-.slow-4 {
-  animation-duration: 1.1s;
-}
-.slow-5 {
-  animation-duration: 1.3s;
-}
-.slow-6 {
   animation-duration: 1.5s;
 }
-.slow-7 {
-  animation-duration: 1.7s;
-}
-
-.slow-8 {
-  animation-duration: 3s;
+.slow-2 {
+  animation-duration: 2s;
 }
 
 .fade-up {
@@ -117,17 +98,20 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 body {
   padding: 0;
   margin: 0;
-  font-family: "Source Code Pro", monospace;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-  color: #f4eeff;
-  font-size: 3.5rem;
+  color: #bbe1fa;
+  font-size: 5rem;
+  font-weight: 600px;
 }
 
 h2 {
-  color: #f4eeff;
+  color: #3282b8;
   font-size: 1.5rem;
+  text-align: center;
+  opacity: 0.5;
 }
 
 p {
@@ -172,7 +156,7 @@ p {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  background: linear-gradient(45deg, transparent, transparent 40%, white);
   animation: wheel 2s linear infinite;
 }
 .loader:before {
@@ -193,31 +177,29 @@ p {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+  background: linear-gradient(45deg, transparent, transparent 40%, white);
   border-radius: 50%;
   z-index: 1000;
   z-index: 1;
   filter: blur(30px);
 }
 
-.container-content {
+.container-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container-title {
   display: flex;
   justify-content: center;
-  gap: 10%;
-  width: 100%;
+  align-items: center;
   padding: 10% 15% 10% 15%;
 }
 
-.container-left {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.container-right {
-  width: 50%;
+.container-content {
+  padding-left: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -292,4 +274,10 @@ p {
   text-decoration: underline;
   text-decoration-color: #f4eeff;
   text-decoration-thickness: 0.2rem;
+}
+
+.keywords {
+  color: #bbe1fa;
+  font-size: 1.75rem;
+  font-weight: 300px;
 }
