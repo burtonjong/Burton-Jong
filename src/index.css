@@ -62,7 +62,7 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 }
 
 .animate {
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-fill-mode: both;
 }
 
@@ -105,6 +105,8 @@ h1 {
   color: #bbe1fa;
   font-size: 5rem;
   font-weight: 600px;
+  text-shadow: 0 0 10px #3282b8, 0 0 20px #3282b8, 0 0 40px #3282b8,
+    0 0 80px #3282b8, 0 0 120px #3282b8;
 }
 
 h2 {
@@ -240,6 +242,55 @@ p {
   background-image: url("./layer1.svg");
 }
 
+/* Media Queries */
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+  .container-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-content {
+    padding-left: 0;
+  }
+}
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+  .container-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-content {
+    padding-left: 0;
+  }
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+  .container-title {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-content {
+    padding-left: 0;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
+
 /* Utility Classes */
 
 .mt-0 {
@@ -280,4 +331,6 @@ p {
   color: #bbe1fa;
   font-size: 1.75rem;
   font-weight: 300px;
+  text-shadow: 0 0 10px #3282b8, 0 0 20px #3282b8, 0 0 40px #3282b8,
+    0 0 80px #3282b8, 0 0 120px #3282b8;
 }
