@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setTimer2(!timer2);
-    }, 7500);
+    }, 5500);
   }, []);
   return (
     <div className="container-stay">
