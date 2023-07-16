@@ -3,24 +3,39 @@ export default function Navbar() {
   return (
     <div class="fixed-navbar">
       <ul>
-        <a href="www.google.com">
-          <li className="navbar-item animate fade-down slow-3">// Home //</li>
-        </a>
-        <a href="www.google.com">
-          <li className="navbar-item animate fade-down slow-3">
-            // Expertise //
-          </li>
-        </a>
-        <a href="www.google.com">
-          <li className="navbar-item animate fade-down slow-3">
-            // Projects //
-          </li>
-        </a>
-        <a href="www.google.com">
-          <li className="navbar-item animate fade-down slow-3">
-            // Contact //
-          </li>
-        </a>
+        <li className="navbar-item">
+          <a
+            href="www.google.com"
+            className="animate fade-down slow-3 nav-item"
+          >
+            <span>// Home //</span>
+          </a>
+        </li>
+
+        <li className="navbar-item">
+          <a
+            href="www.google.com"
+            className="animate fade-down slow-3 nav-item"
+          >
+            <span>// Expertise //</span>
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="www.google.com"
+            className="animate fade-down slow-3 nav-item"
+          >
+            <span>// Projects //</span>
+          </a>
+        </li>
+        <li className="navbar-item">
+          <a
+            href="www.google.com"
+            className="animate fade-down slow-3 nav-item"
+          >
+            <span>// Contact //</span>
+          </a>
+        </li>
       </ul>
     </div>
   );
