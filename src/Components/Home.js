@@ -2,6 +2,7 @@
 import Navbar from "./Navbar";
 import Experience from "./Experience";
 import LoadingBar from "./LoadingBar";
+import Button1 from "./Button1";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
 
         {!timer2 && (
           <>
+            <Button1 />
             <Navbar />
             <div className="container-home">
               <div className="container-title">

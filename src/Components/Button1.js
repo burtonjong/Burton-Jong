@@ -1,8 +1,12 @@
 export default function Button1() {
   return (
     <>
-      <button className="btn-1 underlined">
-        <h1>MEOW</h1>
+      <button
+        className="nav-toggle"
+        aria-controls="fixed-navbar"
+        aria-expanded="false"
+      >
+        <span className="sr-only">Menu</span>
       </button>
     </>
   );

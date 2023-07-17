@@ -49,6 +49,11 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
     0 0 30px #0f4c75, 0 0 50px #0f4c75;
 }
 
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
 /* Animation */
 @keyframes fade {
   0% {
@@ -178,6 +183,17 @@ li > a:hover {
     0 0 15px #507d9b, 0 0 25px #507d9b;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 .btn-1 {
   background-color: transparent;
   border: none;
@@ -302,18 +318,46 @@ li > a:hover {
 
 .fixed-navbar {
   position: fixed;
-  top: 0;
-  inset: 30% 0 0 0;
+  flex-direction: column;
+  inset: 0 10% 0 0;
+  background: hsl(0 0% 0% /0.83);
+  padding: min(10vh, 15rem) 2rem;
+  z-index: 2;
+  margin: 0;
+  --gap: 3rem;
+  padding-left: 0;
 }
 
-.fixed-navbar > ul {
+@supports (backdrop-filter: blur(1rem)) {
+  .fixed-navbar {
+    background: hsl(0 0% 100% /0.1);
+    backdrop-filter: blur(1rem);
+  }
 }
 
 .navbar-item {
   list-style-type: none;
+  padding: min(30vh, 1rem) 2em;
 }
 
 .nav-item {
+  text-decoration: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+  text-shadow: 0 0 1px #0f4c75, 0 0 4px #0f4c75, 0 0 8px #0f4c75,
+    0 0 15px #0f4c75, 0 0 25px #0f4c75;
+}
+
+.nav-toggle {
+  position: absolute;
+  z-index: 100;
+  background: red;
+  /* background-repeat: no-repeat; */
+  border: 0;
+  width: 3rem;
+  aspect-ratio: 1;
+  top: 2rem;
+  left: 2rem;
 }
 
 /* Media Queries */
@@ -370,6 +414,9 @@ li > a:hover {
     display: none;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+    padding-top: 1.75rem;
+    transform: translateX(0%);
   }
 
   .fixed-navbar > ul {
@@ -377,17 +424,13 @@ li > a:hover {
   }
 
   .navbar-item {
-    padding: 0 2.61rem 0 2.61rem;
+    padding: 0 0.1rem 0 0.1rem;
     display: inline;
     color: #bbe1fa;
   }
 
   .nav-item {
-    text-decoration: none;
-    font-family: "Roboto Mono", monospace;
     font-size: 1.25rem;
-    text-shadow: 0 0 1px #0f4c75, 0 0 4px #0f4c75, 0 0 8px #0f4c75,
-      0 0 15px #0f4c75, 0 0 25px #0f4c75;
   }
 
   .container-title {
@@ -409,6 +452,9 @@ li > a:hover {
   .fixed-navbar {
     display: flex;
   }
+  .nav-item {
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -429,6 +475,10 @@ li > a:hover {
   span .keywords {
     font-size: 1.5rem;
   }
+
+  .navbar-item {
+    padding: 0 0.6rem 0 0.6rem;
+  }
 }
 
 @media (min-width: 1281px) {
@@ -440,5 +490,12 @@ li > a:hover {
 
   span .keywords {
     font-size: 3rem;
+  }
+  .nav-item {
+    font-size: 1.55rem;
+  }
+
+  .navbar-item {
+    padding: 0 1.5rem 0 1.5rem;
   }
 }
