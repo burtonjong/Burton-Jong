@@ -1,10 +1,33 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Home from "./Home";
-import Experience from "./Experience";
+import Expertise from "./Expertise";
+import Contact from "./Contact";
+import { useState, useEffect } from "react";
 
 export default function App() {
+  const [waitForAnimation, setWaitForAnimation] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setWaitForAnimation(!waitForAnimation);
+      console.log(waitForAnimation);
+    }, 7200);
+  }, []);
+
   return (
     <div>
-      <Home />
+      <section id="Home">
+        <Home />
+      </section>
+      {waitForAnimation && (
+        <>
+          <section id="Expertise">
+            <Expertise />
+          </section>
+          <section id="Contact">
+            <Contact />
+          </section>
+        </>
+      )}
     </div>
   );
 }

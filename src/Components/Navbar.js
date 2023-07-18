@@ -6,7 +6,6 @@ export default function Navbar() {
 
   function handleClick() {
     setShowNav(!showNav);
-    console.log(showNav);
   }
 
   return (
@@ -19,9 +18,13 @@ export default function Navbar() {
       >
         <span className="sr-only">Menu</span>
       </button>
-      {showNav && (
+      <div>
         <nav>
-          <ul className={"fixed-navbar flex"}>
+          <ul
+            className={
+              showNav ? "fixed-navbar flex" : "fixed-navbar flex hide-nav"
+            }
+          >
             <li className="navbar-item ">
               <a
                 href="www.google.com"
@@ -57,22 +60,7 @@ export default function Navbar() {
             </li>
           </ul>
         </nav>
-      )}
+      </div>
     </>
   );
 }
-
-// function Button1({ onClick, showNav }) {
-//   return (
-//     <>
-//       <button
-//         className="nav-toggle "
-//         aria-controls="fixed-navbar"
-//         aria-expanded="false"
-//         onClick={onClick}
-//       >
-//         <span className="sr-only">Menu</span>
-//       </button>
-//     </>
-//   );
-// }

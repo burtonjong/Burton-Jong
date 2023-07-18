@@ -1,3 +1,7 @@
+/* * {
+  border: 1px solid red;
+} */
+
 /*
 Main body colors
 #BBE1FA
@@ -6,6 +10,7 @@ Main body colors
 #0c192c
 https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 */
+
 /* Utility Classes */
 
 .mt-0 {
@@ -28,14 +33,6 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
   list-style-type: none;
 }
 
-.jc-center {
-  justify-content: center;
-}
-
-.fd-column {
-  flex-direction: column;
-}
-
 .underlined {
   text-decoration: underline;
   text-decoration-color: #f4eeff;
@@ -52,6 +49,39 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-spacea {
+  justify-content: space-around;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 /* Animation */
@@ -146,10 +176,13 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 
 /* Main Styling */
 
+html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 h1 {
@@ -170,6 +203,7 @@ h2 {
 p {
   color: #a6b1e1;
   opacity: 0.5;
+  margin: 0;
 }
 
 a {
@@ -218,6 +252,7 @@ li > a:hover {
   height: 100vh;
   background-color: #0c192c;
 }
+
 .container-fade {
   height: 100vh;
   background-color: black;
@@ -268,10 +303,11 @@ li > a:hover {
 }
 
 .container-title {
+  width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10% 15% 10% 15%;
+  padding: 10% 10% 10% 10%;
 }
 
 .container-content {
@@ -325,6 +361,7 @@ li > a:hover {
   z-index: 2;
   --gap: 3rem;
   padding-left: 4.5rem;
+  padding-right: 0;
   margin: 0;
 }
 
@@ -346,12 +383,13 @@ li > a:hover {
 .navbar-item {
   list-style-type: none;
   padding: min(30vh, 1rem) 2em;
+  padding-right: 0;
 }
 
 .nav-item {
   text-decoration: none;
   font-family: "Roboto Mono", monospace;
-  font-size: 2rem;
+  font-size: 0.82rem;
   text-shadow: 0 0 1px #0f4c75, 0 0 4px #0f4c75, 0 0 8px #0f4c75,
     0 0 15px #0f4c75, 0 0 25px #0f4c75;
 }
@@ -366,7 +404,45 @@ li > a:hover {
   aspect-ratio: 1;
   top: 2rem;
   left: 2em;
-  padding-left: 0;
+  padding: 0;
+}
+
+.container-expertise {
+  height: 100vh;
+  background: rgb(12, 25, 44);
+  background: linear-gradient(
+    180deg,
+    rgba(12, 25, 44, 1) 0%,
+    rgba(6, 54, 85, 1) 97%,
+    rgba(20, 73, 110, 1) 100%
+  );
+}
+
+.container-languages {
+  padding-top: 5%;
+  height: auto;
+  width: 75%;
+}
+
+.container-box {
+  padding-top: 2.5%rem;
+  height: 100%;
+  gap: 5rem;
+  align-content: flex-start;
+}
+
+.language-box {
+  width: 10rem;
+  height: 9.5rem;
+  border-radius: 0.5rem;
+  background-color: #0f4c75;
+  gap: 5%;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
 }
 
 /* Media Queries */
@@ -404,12 +480,21 @@ li > a:hover {
   .container-content {
     padding-left: 0;
   }
+  .nav-item {
+    font-size: 1.15rem;
+  }
 }
 @media (min-width: 481px) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .nav-item {
+    font-size: 1.3rem;
+  }
 }
 @media (min-width: 641px) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .navbar-item {
+    padding-left: 1.3rem;
+  }
 }
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
@@ -418,17 +503,17 @@ li > a:hover {
   }
 
   .fixed-navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 3.5rem;
-    background-color: transparent;
+    background-color: #0c192c;
     z-index: 1;
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding-top: 1.75rem;
+    padding: 1rem 0 0 0;
     transform: translateX(0%);
   }
 
@@ -443,7 +528,7 @@ li > a:hover {
   }
 
   .nav-item {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .container-title {
@@ -505,10 +590,43 @@ li > a:hover {
     font-size: 3rem;
   }
   .nav-item {
-    font-size: 1.55rem;
+    font-size: 1.3rem;
   }
 
   .navbar-item {
     padding: 0 1.5rem 0 1.5rem;
   }
+}
+
+/* SVG for Expertise */
+.html {
+  background: url("./images/HTML.svg");
+}
+
+.c {
+  background: url("./images/C.svg");
+}
+
+.cpp {
+  background: url("./images/CPP.svg");
+}
+
+.node {
+  background: url("./images/NODEJS.svg");
+}
+
+.js {
+  background: url("./images/JS.svg");
+}
+
+.git {
+  background: url("./images/GIT.svg");
+}
+
+.css {
+  background: url("./images/CSS.svg");
+}
+
+.react {
+  background: url("./images/REACT.svg");
 }
