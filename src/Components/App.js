@@ -17,18 +17,18 @@ export default function App() {
 
   return (
     <div>
-      <section id="Home">
+      <section id="home">
         <Home />
       </section>
       {waitForAnimation && (
         <>
-          <section id="Expertise">
+          <section id="expertise">
             <Expertise />
           </section>
-          <section id="Projects">
+          <section id="projects">
             <Projects />
           </section>
-          <section id="Contact">
+          <section id="contact">
             <Contact />
           </section>
         </>

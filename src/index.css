@@ -218,6 +218,10 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 
 /* Main Styling */
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   padding: 0;
@@ -438,16 +442,32 @@ li > a:hover {
 }
 
 .nav-toggle {
-  position: absolute;
   z-index: 100;
   background: url("./hamburger.svg");
   background-repeat: no-repeat;
   border: 0;
   width: 3rem;
   aspect-ratio: 1;
-  top: 2rem;
-  left: 2em;
+
   padding: 0;
+}
+.circle {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  background: #0f4c75;
+  position: absolute;
+  top: 2%;
+  left: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 10000;
+  background: transparent;
 }
 
 .container-expertise {
@@ -460,6 +480,7 @@ li > a:hover {
     rgba(15, 76, 117, 1) 100%
   );
   text-align: center;
+  padding-top: 3.2rem;
 }
 
 .container-languages {
@@ -606,6 +627,10 @@ li > a:hover {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 
   .nav-toggle {
+    display: none;
+  }
+
+  .circle {
     display: none;
   }
 

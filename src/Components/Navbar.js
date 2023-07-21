@@ -8,16 +8,24 @@ export default function Navbar() {
     setShowNav(!showNav);
   }
 
+  function closeNav() {
+    setShowNav(!showNav);
+    setShowNav(!showNav);
+  }
+
   return (
     <>
-      <button
-        className="nav-toggle "
-        aria-controls="fixed-navbar"
-        aria-expanded="false"
-        onClick={handleClick}
-      >
-        <span className="sr-only">Menu</span>
-      </button>
+      <div className={showNav ? "circle fixed" : "circle"}>
+        <button
+          className="nav-toggle "
+          aria-controls="fixed-navbar"
+          aria-expanded="false"
+          onClick={handleClick}
+        >
+          <span className="sr-only">Menu</span>
+        </button>
+      </div>
+
       <div>
         <nav>
           <ul
@@ -27,8 +35,9 @@ export default function Navbar() {
           >
             <li className="navbar-item ">
               <a
-                href="www.google.com"
+                href="#home"
                 className="animate fade-down slow-3 nav-item"
+                onClick={closeNav}
               >
                 <span>00 Home //</span>
               </a>
@@ -36,24 +45,27 @@ export default function Navbar() {
 
             <li className="navbar-item">
               <a
-                href="www.google.com"
+                href="#expertise"
                 className="animate fade-down slow-3 nav-item"
+                onClick={closeNav}
               >
                 <span>01 Expertise //</span>
               </a>
             </li>
             <li className="navbar-item">
               <a
-                href="www.google.com"
+                href="#projects"
                 className="animate fade-down slow-3 nav-item"
+                onClick={closeNav}
               >
                 <span>02 Projects //</span>
               </a>
             </li>
             <li className="navbar-item">
               <a
-                href="www.google.com"
+                href="#contact"
                 className="animate fade-down slow-3 nav-item"
+                onClick={closeNav}
               >
                 <span>03 Contact //</span>
               </a>
