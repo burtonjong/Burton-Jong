@@ -1,11 +1,18 @@
 import LanguageBox from "./LanguageBox";
+import { useInView } from "react-intersection-observer";
 
 export default function Expertise() {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
   return (
-    <div className="container-expertise flex row jc-center" id="half-vh">
-      <div className="container-languages flex  column">
+    <div className="container-expertise flex column">
+      <div className="container-languages flex column">
         <div className="expertise-title flex centered">
-          <h2>My Expertise</h2>
+          <h1 className={`title2 ${inView ? "hidden" : "show"}`} ref={ref}>
+            My Expertise.
+          </h1>
         </div>
         <div className="container-box flex row jc-center wrap">
           {" "}
@@ -19,6 +26,7 @@ export default function Expertise() {
           <LanguageBox image={"cpp"}>C++</LanguageBox>
         </div>
       </div>
+      <div className="information flex jc-center ai-center"></div>
     </div>
   );
 }
