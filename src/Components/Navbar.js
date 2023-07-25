@@ -1,8 +1,24 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useScrollListener from "../hooks/useScrollListener";
 
-export default function Navbar() {
+export default function Navbar({ show }) {
   const [showNav, setShowNav] = useState(false);
+  const [navClassList, setNavClassList] = useState([]);
+  const scroll = useScrollListener();
+
+  useEffect(() => {
+    const _classList = [];
+
+    if (scroll.y > 150 && scroll.y - scroll.lastY > 0) {
+      _classList.push("nav-bar--hidden");
+      if (showNav) {
+        setShowNav(!showNav);
+      }
+    }
+
+    setNavClassList(_classList);
+  }, [scroll.y, scroll.lastY, showNav]);
 
   function handleClick() {
     setShowNav(!showNav);
@@ -15,22 +31,23 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={showNav ? "circle fixed" : "circle"}>
-        <button
-          className="nav-toggle "
-          aria-controls="fixed-navbar"
-          aria-expanded="false"
-          onClick={handleClick}
-        >
-          <span className="sr-only">Menu</span>
-        </button>
-      </div>
-
-      <div>
-        <nav>
+      <div className={"max-height max-width absolute"}>
+        <div className="circle">
+          <button
+            className="nav-toggle "
+            aria-controls="fixed-navbar"
+            aria-expanded="false"
+            onClick={handleClick}
+          >
+            <span className="sr-only">Menu</span>
+          </button>
+        </div>
+        <nav className={"max-height " + navClassList.join(" ")}>
           <ul
             className={
-              showNav ? "fixed-navbar flex" : "fixed-navbar flex hide-nav"
+              showNav
+                ? "fixed-navbar flex max-height"
+                : "fixed-navbar flex hide-nav notransition"
             }
           >
             <li className="navbar-item ">

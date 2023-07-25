@@ -11,11 +11,30 @@ Main body colors
 https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 */
 /* animation delays */
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
 .hidden {
   opacity: 1;
   filter: blur(0px);
   transform: translateX(0%);
   transition: all 1s;
+}
+
+.max-height {
+  height: 100%;
+}
+
+.max-width {
+  width: 100%;
+}
+
+.absolute {
+  position: absolute;
 }
 
 .show {
@@ -311,6 +330,14 @@ p > span {
   background-color: #0c192c;
 }
 
+nav.nav-bar--hidden {
+  transform: translateY(-100%);
+}
+
+nav {
+  transition: transform 150ms ease-in-out;
+}
+
 .container-fade {
   height: 100vh;
   background-color: black;
@@ -411,20 +438,17 @@ p > span {
 }
 
 .fixed-navbar {
-  position: fixed;
+  position: sticky;
   flex-direction: column;
   inset: 0 10% 0 0;
   padding: min(10vh, 10rem) 2rem;
-  background: hsl(0 0% 0% /0.2);
+  background: #0c192c;
   z-index: 2;
   --gap: 3rem;
   padding-left: 4.5rem;
   padding-right: 0;
   margin: 0;
-}
-
-.show-nav {
-  transform: translateX(0%);
+  transition: transform 150ms ease-in-out;
 }
 
 .hide-nav {
@@ -646,17 +670,28 @@ p > span {
   }
 
   .fixed-navbar {
+    background: #0c192c;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2rem 0 1rem 0;
+    -webkit-box-shadow: 0 4px 6px -6px #bbe1fa;
+    -moz-box-shadow: 0 4px 6px -6px #bbe1fa;
+    box-shadow: 0 4px 6px -6px #bbe1fa;
+    height: auto;
+  }
+
+  nav {
     position: fixed;
     top: 0;
     width: 100%;
     height: 3.5rem;
     z-index: 1;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    padding: 1rem 0 0 0;
-    transform: translateX(0%);
+    transition: transform 300ms ease-in-out;
+  }
+
+  .hide-nav {
+    transform: none;
   }
 
   .fixed-navbar > ul {
