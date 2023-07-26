@@ -43,7 +43,9 @@ export default function Home() {
             <Navbar className={show} />
             <div className="container-home">
               <div className="container-title">
-                <h1 className="animate fade-up slow-1">BURTON JONG</h1>
+                <h1 className="animate fade-up slow-1 highlight">
+                  BURTON JONG
+                </h1>
                 <div className="container-content">
                   <h2 className="animate fade-up slow-2">
                     I am a second year student in the{" "}
