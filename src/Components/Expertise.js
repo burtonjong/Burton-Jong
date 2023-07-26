@@ -10,7 +10,7 @@ export default function Expertise() {
     <div className="container-expertise flex column">
       <div className="container-languages flex column">
         <div className="expertise-title flex centered">
-          <h1 className={`title2 ${inView ? "hidden" : "show"}`} ref={ref}>
+          <h1 className={`title2 `} ref={ref}>
             My Expertise.
           </h1>
         </div>

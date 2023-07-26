@@ -20,8 +20,7 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 
 .highlight {
   text-shadow: 0 0 1px #bbe1fa, 0 0 4px #bbe1fa, 0 0 7px #bbe1fa,
-    0 0 10px #0f4c75, 0 0 15px #0f4c75, 0 0 20px #0f4c75, 0 0 25px #0f4c75,
-    0 0 30px #0f4c75;
+    0 0 10px #0f4c75, 0 0 15px #0f4c75, 0 0 20px;
 }
 
 .hidden {
@@ -63,6 +62,9 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 }
 
 /* Utility Classes */
+.blu3 {
+  color: #3282b8;
+}
 
 .ta-center {
   text-align: center;
@@ -151,6 +153,16 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.no-gap {
+  gap: 0px;
+  align-content: flex-start;
+}
+
+.text2 {
+  font-family: "Roboto Mono", monospace;
+  padding-left: 0.2rem;
+}
+
 /* Animation */
 @keyframes fade {
   0% {
@@ -164,7 +176,7 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 @keyframes fade-up {
   0% {
     opacity: 0;
-    transform: translateY(30px) scale(0.9);
+    /* transform: translateY(20px) scale(0.9); */
   }
   100% {
     opacity: 1;
@@ -175,7 +187,7 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 @keyframes fade-down {
   0% {
     opacity: 0;
-    transform: translateY(-20px) scale(0.9);
+    transform: translateY(-30px) scale(0.9);
   }
   100% {
     opacity: 1;
@@ -225,15 +237,17 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 }
 
 .slow-3 {
-  animation-duration: 2.5s;
+  animation-duration: 0.2s;
 }
 
 .fade-up {
   animation-name: fade-up;
+  animation-timing-function: linear;
 }
 
 .fade-down {
   animation-name: fade-down;
+  animation-timing-function: linear;
 }
 
 .slide-in-left {
@@ -338,6 +352,9 @@ p > span {
 
 nav.nav-bar--hidden {
   transform: translateY(-100%);
+  -webkit-box-shadow: 0 7px 15px -10px black;
+  -moz-box-shadow: 0 7px 15px -10px black;
+  box-shadow: 0 7px 15px -10px black;
 }
 
 nav {
@@ -350,6 +367,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.resp {
+  flex-direction: column;
+}
+
+li:hover {
+  transform: translateY(-3px);
+}
+svg:hover {
+  fill: #bbe1fa;
 }
 
 .loader {
@@ -397,7 +425,7 @@ nav {
   width: 75%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 10% 10% 10% 10%;
 }
 
@@ -529,11 +557,16 @@ nav {
   width: auto;
 }
 
+#name {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .container-box {
   max-width: 1087px;
   padding-top: 2.5rem;
   height: 100%;
-  gap: 5rem;
+  gap: 2.5rem;
   align-content: flex-start;
 }
 
@@ -580,12 +613,12 @@ nav {
   background: #0f4c75;
 }
 
+.side-title {
+  text-align: left;
+}
+
 /* Media Queries */
 @media (max-width: 319px) {
-  .container-title {
-    flex-direction: column;
-  }
-
   h1 {
     font-size: 2rem;
     text-align: center;
@@ -604,9 +637,6 @@ nav {
 }
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
-  .container-title {
-    flex-direction: column;
-  }
 
   .container-title > h1 {
     text-align: center;
@@ -637,6 +667,7 @@ nav {
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
+    gap: 5rem;
   }
 
   .language-box:nth-child(2) {
@@ -664,8 +695,36 @@ nav {
     padding-left: 1.3rem;
   }
 }
+
+@media (min-width: 859px) {
+  .language-box:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .language-box:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .language-box:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+  .language-box:nth-child(6) {
+    transition-delay: 0.2s;
+  }
+  .language-box:nth-child(7) {
+    transition-delay: 0.4s;
+  }
+  .language-box:nth-child(8) {
+    transition-delay: 0.6s;
+  }
+}
+
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  .container-sidelink {
+    position: fixed;
+    bottom: 0;
+    left: 2rem;
+    background: red;
+  }
 
   .nav-toggle {
     display: none;
@@ -675,15 +734,17 @@ nav {
     display: none;
   }
 
+  .resp {
+    flex-direction: row;
+  }
+
   .fixed-navbar {
-    background: #0c192c;
+    display: flex;
+    background: transparent;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     padding: 2rem 0 1rem 0;
-    -webkit-box-shadow: 0 4px 6px -6px #bbe1fa;
-    -moz-box-shadow: 0 4px 6px -6px #bbe1fa;
-    box-shadow: 0 4px 6px -6px #bbe1fa;
     height: auto;
   }
 
@@ -691,9 +752,12 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 3.5rem;
     z-index: 1;
     transition: transform 300ms ease-in-out;
+  }
+
+  nav.max-height {
+    height: 10%;
   }
 
   .hide-nav {
@@ -714,12 +778,23 @@ nav {
     font-size: 1.5rem;
   }
 
-  .container-title {
-    flex-direction: row;
-  }
-
   .container-content {
     margin-left: 3rem;
+    justify-content: center;
+  }
+
+  .small-text {
+    animation-delay: 1s;
+  }
+
+  .main-title {
+    animation-delay: 1.2s;
+    text-align: left;
+  }
+
+  .side-title {
+    animation-delay: 1.4s;
+    text-align: center;
   }
 
   h2 {
@@ -730,9 +805,6 @@ nav {
     font-size: 0.75em;
   }
 
-  .fixed-navbar {
-    display: flex;
-  }
   .nav-item {
     font-size: 1.25rem;
   }
@@ -759,27 +831,6 @@ nav {
 
   .navbar-item {
     padding: 0 0.6rem 0 0.6rem;
-  }
-
-  @media (min-width: 1131px) {
-  }
-  .language-box:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-  .language-box:nth-child(3) {
-    transition-delay: 0.4s;
-  }
-  .language-box:nth-child(4) {
-    transition-delay: 0.6s;
-  }
-  .language-box:nth-child(6) {
-    transition-delay: 0.2s;
-  }
-  .language-box:nth-child(7) {
-    transition-delay: 0.4s;
-  }
-  .language-box:nth-child(8) {
-    transition-delay: 0.6s;
   }
 }
 
@@ -837,4 +888,19 @@ nav {
 
 .react {
   background: url("./images/REACT.svg");
+}
+
+/* Delays for navbar and home text */
+
+.zero {
+  animation-delay: 0.2s;
+}
+.one {
+  animation-delay: 0.4s;
+}
+.two {
+  animation-delay: 0.6s;
+}
+.three {
+  animation-delay: 0.8s;
 }

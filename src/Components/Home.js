@@ -43,18 +43,23 @@ export default function Home() {
             <Navbar className={show} />
             <div className="container-home">
               <div className="container-title">
-                <h1 className="animate fade-up slow-1 highlight">
-                  BURTON JONG
-                </h1>
-                <div className="container-content">
-                  <h2 className="animate fade-up slow-2">
-                    I am a second year student in the{" "}
-                    <span className="keywords">
-                      Shulich School of Engineering
-                    </span>{" "}
-                    pursuing my Bachelor's in{" "}
-                    <span className="keywords">Software Engineering</span>.
-                  </h2>
+                <p className="text2 animate fade-up slow-3 small-text">
+                  Hi, my name is
+                </p>
+                <div className="flex resp no-gap">
+                  <h1 className="animate fade-up slow-3 main-title" id="name">
+                    BURTON JONG
+                  </h1>
+                  <div className="container-content">
+                    <h2 className="animate fade-up slow-3 side-title">
+                      I am a second year student in the{" "}
+                      <span className="keywords">
+                        Shulich School of Engineering
+                      </span>{" "}
+                      pursuing my Bachelor's in{" "}
+                      <span className="keywords">Software Engineering</span>.
+                    </h2>
+                  </div>
                 </div>
               </div>
             </div>

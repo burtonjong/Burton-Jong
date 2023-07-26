@@ -50,41 +50,33 @@ export default function Navbar({ show }) {
                 : "fixed-navbar flex hide-nav notransition"
             }
           >
-            <li className="navbar-item ">
-              <a
-                href="#home"
-                className="animate fade-down slow-3 nav-item"
-                onClick={closeNav}
-              >
-                <span>00 Home //</span>
+            <li className="navbar-item animate fade-down slow-3 zero">
+              <a href="#home" className="nav-item" onClick={closeNav}>
+                <span>
+                  <span className="blu3">00</span> Home //
+                </span>
               </a>
             </li>
 
-            <li className="navbar-item">
-              <a
-                href="#expertise"
-                className="animate fade-down slow-3 nav-item"
-                onClick={closeNav}
-              >
-                <span>01 Expertise //</span>
+            <li className="navbar-item animate fade-down slow-3 one">
+              <a href="#expertise" className=" nav-item" onClick={closeNav}>
+                <span>
+                  <span className="blu3">01</span> Expertise //
+                </span>
               </a>
             </li>
-            <li className="navbar-item">
-              <a
-                href="#projects"
-                className="animate fade-down slow-3 nav-item"
-                onClick={closeNav}
-              >
-                <span>02 Projects //</span>
+            <li className="navbar-item animate fade-down slow-3 two">
+              <a href="#projects" className=" nav-item" onClick={closeNav}>
+                <span>
+                  <span className="blu3">02</span> Projects //
+                </span>
               </a>
             </li>
-            <li className="navbar-item">
-              <a
-                href="#contact"
-                className="animate fade-down slow-3 nav-item"
-                onClick={closeNav}
-              >
-                <span>03 Contact //</span>
+            <li className="navbar-item animate fade-down slow-3 three">
+              <a href="#contact" className=" nav-item" onClick={closeNav}>
+                <span>
+                  <span className="blu3">03</span> Contact //
+                </span>
               </a>
             </li>
           </ul>
