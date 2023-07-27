@@ -1,8 +1,15 @@
+import ProjectShowcase from "./ProjectShowcase";
+
 export default function Projects() {
   return (
-    <div className="container-projects flex jc-center ai-center">
-      <div>
-        <h1 className="title2">Please come back later.</h1>
+    <div className="container-projects flex column ai-center">
+      <h1 className="title3">My Projects.</h1>
+      <div className="container-showcase flex wrap jc-center">
+        <ProjectShowcase />
+        <ProjectShowcase />
+        <ProjectShowcase />
+        <ProjectShowcase />
+        <ProjectShowcase />
       </div>
     </div>
   );

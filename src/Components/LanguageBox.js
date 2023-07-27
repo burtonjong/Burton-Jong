@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 export default function LanguageBox({ image, children }) {
   const { ref, inView } = useInView({
     threshold: 0,
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   return (
