@@ -9,11 +9,16 @@ export default function Expertise() {
   return (
     <div className="container-expertise flex column">
       <div className="container-languages flex column">
-        <div className="expertise-title flex centered">
+        <div className="flex column">
           <h1 className={`title2 `} ref={ref}>
             My Expertise.
           </h1>
+          <h2 className="small-title3">
+            My current focus is learning advanced{" "}
+            <span className="keywords">React.</span>
+          </h2>
         </div>
+
         <div className="container-box flex row jc-center wrap">
           {" "}
           <LanguageBox image={"html"}>HTML</LanguageBox>

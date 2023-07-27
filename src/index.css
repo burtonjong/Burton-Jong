@@ -331,9 +331,7 @@ a {
 }
 
 li > a:hover {
-  color: white;
-  text-shadow: 0 0 1px #507d9b, 0 0 4px #507d9b, 0 0 8px #507d9b,
-    0 0 15px #507d9b, 0 0 25px #507d9b;
+  color: #3282b8;
 }
 
 p > span {
@@ -404,10 +402,19 @@ nav {
 }
 
 li:hover {
+  transition: transform 0.1s linear;
   transform: translateY(-6px);
 }
 svg:hover {
   fill: #bbe1fa;
+}
+
+.container-box div.language-box:hover {
+  transition: transform 0.1s linear;
+  transform: translateY(-6px);
+  box-shadow: 0 2.8px 2.2px #0f4c75, 0 6.7px 5.3px #0f4c75,
+    0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px #0f4c75,
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086);
 }
 
 .loader {
@@ -465,20 +472,6 @@ svg:hover {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-}
-
-.profile {
-  width: 50%;
-  height: 50%;
-  border-radius: 3%;
-  border-color: black;
-  border-image-width: 10px;
-}
-
-.profile-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .link-container {
@@ -636,10 +629,16 @@ svg:hover {
 }
 
 .title3 {
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0 0 0;
   margin: 0;
   text-align: center;
 }
+
+.small-title3 {
+  margin: 0;
+  opacity: 1;
+}
+
 .side-title {
   text-align: left;
 }
@@ -659,7 +658,7 @@ svg:hover {
   background: #1f385c;
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 1.2rem 2rem;
 }
 
 .project-image {
@@ -667,13 +666,42 @@ svg:hover {
   border-top-right-radius: 15px;
 }
 
+.image-box:hover img {
+  transform: scale(1.1);
+}
+
+.image-box {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.image-box img {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+}
+
 .responsive {
   width: 100%;
   height: auto;
 }
 
+.high {
+  padding-top: 0.7rem;
+  font-size: larger;
+  opacity: 1;
+  color: white;
+  font-weight: 500;
+}
+
 .project-text {
-  padding-top: 2rem;
+  padding-top: 0.5rem;
   opacity: 1;
 }
 
