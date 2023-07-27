@@ -2,10 +2,15 @@
 import Navbar from "./Navbar";
 import LoadingBar from "./LoadingBar";
 import { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function Home() {
   const [timer2, setTimer2] = useState(true);
   const [show, setShow] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,22 +48,28 @@ export default function Home() {
             <Navbar className={show} />
             <div className="container-home">
               <div className="container-title">
-                <p className="text2 animate fade-up slow-3 small-text">
-                  Hi, my name is
-                </p>
+                <div className="animate fade-up slow-3 small-text">
+                  <p className="text2 ">Hi, my name is</p>
+                </div>
+
                 <div className="flex resp no-gap">
-                  <h1 className="animate fade-up slow-3 main-title" id="name">
-                    BURTON JONG
-                  </h1>
+                  <div className="animate fade-up slow-3 main-title">
+                    <h1 className="ta-left" id="name">
+                      BURTON JONG
+                    </h1>
+                  </div>
+
                   <div className="container-content">
-                    <h2 className="animate fade-up slow-3 side-title">
-                      I am a second year student in the{" "}
-                      <span className="keywords">
-                        Shulich School of Engineering
-                      </span>{" "}
-                      pursuing my Bachelor's in{" "}
-                      <span className="keywords">Software Engineering</span>.
-                    </h2>
+                    <div className="animate fade-up slow-3 side-title">
+                      <h2 className="ta-left side">
+                        I am a second year student in the{" "}
+                        <span className="keywords">
+                          Shulich School of Engineering
+                        </span>{" "}
+                        pursuing my Bachelor's in{" "}
+                        <span className="keywords">Software Engineering</span>.
+                      </h2>
+                    </div>
                   </div>
                 </div>
               </div>

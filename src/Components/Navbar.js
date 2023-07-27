@@ -32,7 +32,7 @@ export default function Navbar({ show }) {
   return (
     <>
       <div className={"max-height max-width absolute"}>
-        <div className="container-hamburger">
+        <div className="container-hamburger animate fade-up slow-3">
           <button
             className="nav-toggle "
             aria-controls="fixed-navbar"

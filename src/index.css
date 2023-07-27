@@ -207,11 +207,11 @@ https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 @keyframes fade-up {
   0% {
     opacity: 0;
-    /* transform: translateY(20px) scale(0.9); */
+    transform: translateY(10px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 }
@@ -536,6 +536,11 @@ svg:hover {
     0 0 15px #0f4c75, 0 0 25px #0f4c75; */
 }
 
+.side {
+  opacity: 1;
+  text-align: left;
+}
+
 .nav-toggle {
   z-index: 100;
   background: url("./hamburger.svg");
@@ -825,6 +830,15 @@ svg:hover {
 
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  .side {
+    text-align: center;
+  }
+
+  .main1 {
+    text-align: left;
+  }
+
   .container-showcase {
     gap: 2rem;
   }
@@ -894,14 +908,6 @@ svg:hover {
     justify-content: center;
   }
 
-  .main-title {
-    text-align: left;
-  }
-
-  .side-title {
-    text-align: center;
-  }
-
   h2 {
     font-size: 1.25rem;
   }
@@ -923,7 +929,6 @@ svg:hover {
 
   h1 {
     font-size: 6rem;
-    text-align: center;
   }
 
   h2 {
