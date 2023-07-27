@@ -6,10 +6,6 @@ export default function Projects() {
       <h1 className="title3">My Projects.</h1>
       <div className="container-showcase flex wrap jc-center">
         <ProjectShowcase />
-        <ProjectShowcase />
-        <ProjectShowcase />
-        <ProjectShowcase />
-        <ProjectShowcase />
       </div>
     </div>
   );

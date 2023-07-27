@@ -32,7 +32,7 @@ export default function Navbar({ show }) {
   return (
     <>
       <div className={"max-height max-width absolute"}>
-        <div className="circle">
+        <div className="container-hamburger">
           <button
             className="nav-toggle "
             aria-controls="fixed-navbar"
