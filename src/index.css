@@ -11,6 +11,9 @@ Main body colors
 https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 */
 
+* {
+  -webkit-font-smoothing: antialiased;
+}
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
@@ -559,10 +562,12 @@ svg:hover {
 }
 
 .container-expertise {
+  overflow-y: hidden;
   height: 100vh;
   background: #0c192c;
   text-align: center;
   padding-top: 3.2rem;
+  padding-bottom: 10rem;
 }
 
 .container-languages {
