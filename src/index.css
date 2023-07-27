@@ -6,7 +6,7 @@
 Main body colors
 #BBE1FA
 #3282B8
-#0F4C75
+#1f385c
 #0c192c
 https://colorhunt.co/palette/f4eeffdcd6f7a6b1e1424874
 */
@@ -550,13 +550,9 @@ svg:hover {
 
   padding: 0;
 }
-.circle {
-  border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
-  background: #0f4c75;
+.container-hamburger {
   position: absolute;
-  top: 2%;
+  top: 2em;
   left: 2em;
   display: flex;
   align-items: center;
@@ -598,7 +594,7 @@ svg:hover {
   width: 8rem;
   height: 7rem;
   border-radius: 0.5rem;
-  background-color: #0f4c75;
+  background-color: #1f385c;
   gap: 5%;
   box-shadow: 0 0 0 1px #000, 0 30px 30px rgba(0, 0, 0, 0.07),
     0 15px 15px rgba(0, 0, 0, 0.06), 0 10px 8px rgba(0, 0, 0, 0.05),
@@ -678,6 +674,7 @@ svg:hover {
 
 .project-text {
   padding-top: 2rem;
+  opacity: 1;
 }
 
 .small-text {
@@ -812,10 +809,6 @@ svg:hover {
   }
 
   .nav-toggle {
-    display: none;
-  }
-
-  .circle {
     display: none;
   }
 
