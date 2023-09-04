@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import LoadingBar from "./LoadingBar";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import profile from "../images/profile.jpg";
 
 export default function Home() {
   const [timer2, setTimer2] = useState(true);
@@ -60,7 +61,7 @@ export default function Home() {
                   </div>
 
                   <div className="container-content">
-                    <div className="animate fade-up slow-3 side-title">
+                    <div className="animate fade-up slow-3 side-title flex row">
                       <h2 className="ta-left side">
                         I am a second year student in the{" "}
                         <span className="keywords">

@@ -1,7 +1,6 @@
-import project1 from "../images/project1.png";
 import { useInView } from "react-intersection-observer";
 
-export default function ProjectShowcase() {
+export default function ProjectShowcase({ children, name, picture, link }) {
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
@@ -13,26 +12,19 @@ export default function ProjectShowcase() {
       }`}
       ref={ref}
     >
-      <a
-        target="_blank"
-        rel="noreferrer"
-        href="https://burtonjong.github.io/BillSplit/"
-      >
+      <a target="_blank" rel="noreferrer" href={link}>
         <div className="image-box">
           <img
             className="project-image responsive "
-            src={project1}
+            src={picture}
             alt="eat-n-split project"
           />
         </div>
       </a>
 
       <div className="project-description">
-        <p className="high">BillSplit</p>
-        <p className="project-text">
-          This app was created with <span className="keywords">React</span> to
-          keep track of friends who owe you, or who you owe money to.
-        </p>
+        <p className="high">{name}</p>
+        <p className="project-text">{children}</p>
       </div>
     </div>
   );

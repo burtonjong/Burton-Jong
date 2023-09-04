@@ -7,7 +7,7 @@ export default function Expertise() {
     triggerOnce: true,
   });
   return (
-    <div className="container-expertise flex column">
+    <div className="container-expertise flex column jc-center">
       <div className="container-languages flex column">
         <div className="flex column">
           <h1 className={`title2 `} ref={ref}>
@@ -31,9 +31,6 @@ export default function Expertise() {
           <LanguageBox image={"cpp"}>C++</LanguageBox>
         </div>
       </div>
-      <div className="information flex jc-center ai-center"></div>
     </div>
   );
 }
-
-// HTML, CSS, JS, REACT, C, C++, NODE, GIT
