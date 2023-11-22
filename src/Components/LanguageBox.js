@@ -9,7 +9,7 @@ export default function LanguageBox({ image, children }) {
   return (
     <div
       className={`language-box flex centered column glass ${
-        inView ? "animate fade-up" : ""
+        inView ? "hidden1" : "show1"
       }`}
       ref={ref}
     >
