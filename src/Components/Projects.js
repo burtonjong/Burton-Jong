@@ -22,7 +22,8 @@ export default function Projects() {
           link="https://burtonjong.github.io/BillSplit/"
         >
           This app was created with <span className="keywords">React</span> to
-          keep track of friends who owe you, or who you owe money to.
+          keep track of friends who owe you, or who you owe money to. Front-end
+          only, works on desktop.
         </ProjectShowcase>
         <ProjectShowcase
           name="Rankedify"
