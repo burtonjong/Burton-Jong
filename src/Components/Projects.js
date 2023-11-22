@@ -1,6 +1,7 @@
 import ProjectShowcase from "./ProjectShowcase";
 import project1 from "../images/project1.png";
 import project2 from "../images/project2.png";
+import project3 from "../images/project3.png";
 
 export default function Projects() {
   return (
@@ -28,11 +29,22 @@ export default function Projects() {
           picture={project2}
           link="https://www.linkedin.com/posts/burton-jong-849b35209_me-and-anthony-chans-largest-project-in-activity-7098839609391943680-g6BN?utm_source=share&utm_medium=member_desktop"
         >
-          A group project that showcases a personal ranking of music albums.
-          This app is currently being developed with{" "}
+          A solo project that showcases a personal ranking of music albums. This
+          app is currently being developed with{" "}
           <span className="keywords">React</span> and{" "}
-          <span className="keywords">React Router</span>. We are currently
-          deciding on a backend.
+          <span className="keywords">React Router</span>. Currently submitted to
+          Spotify for approval.
+        </ProjectShowcase>
+        <ProjectShowcase
+          name="Sustainabite"
+          picture={project3}
+          link="https://devpost.com/software/sustainabite-gn74z9?ref_content=my-projects-tab&ref_feature=my_projects"
+        >
+          A group project that takes in a recipe and outputs more sustainable
+          ingredients for that recipe. This app was created during the 2023 Hack
+          the Change Hackathon and mainly used{" "}
+          <span className="keywords">React</span> and{" "}
+          <span className="keywords">OpenAI's</span> API.
         </ProjectShowcase>
       </div>
     </div>
