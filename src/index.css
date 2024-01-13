@@ -1035,6 +1035,18 @@ svg:hover {
   background: url("./images/REACT.svg");
 }
 
+.tensorflow {
+  background: url("./images/TENSORFLOW.svg");
+}
+
+.python {
+  background: url("./images/PYTHON.svg");
+}
+
+.flask {
+  background: url("./images/FLASK.svg");
+}
+
 /* Delays for navbar and home text */
 
 .zero {

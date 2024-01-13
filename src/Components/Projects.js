@@ -17,13 +17,14 @@ export default function Projects() {
 
       <div className="container-showcase flex wrap jc-center column">
         <ProjectShowcase
-          name="BillSplit"
+          name="Lyric Generator"
           picture={project1}
-          link="https://burtonjong.github.io/BillSplit/"
+          link="https://github.com/burtonjong/ML"
         >
-          This app was created with <span className="keywords">React</span> to
-          keep track of friends who owe you, or who you owe money to. Front-end
-          only, works on desktop.
+          This app was created with <span className="keywords">TensorFlow</span>{" "}
+          to generate lyrics based off of a dataset containing an artist's
+          lyrics. More details on the training process can be found by clicking
+          here.
         </ProjectShowcase>
         <ProjectShowcase
           name="Rankedify"

@@ -21,13 +21,13 @@ export default function Expertise() {
 
         <div className="container-box flex row jc-center wrap">
           {" "}
-          <LanguageBox image={"html"}>HTML</LanguageBox>
-          <LanguageBox image={"css"}>CSS</LanguageBox>
+          <LanguageBox image={"flask"}>Flask</LanguageBox>
+          <LanguageBox image={"python"}>Python</LanguageBox>
           <LanguageBox image={"js"}>JavaScript</LanguageBox>
           <LanguageBox image={"react"}>React</LanguageBox>
           <LanguageBox image={"node"}>NodeJS</LanguageBox>
           <LanguageBox image={"git"}>Git</LanguageBox>
-          <LanguageBox image={"c"}>C</LanguageBox>
+          <LanguageBox image={"tensorflow"}>Tensorflow</LanguageBox>
           <LanguageBox image={"cpp"}>C++</LanguageBox>
         </div>
       </div>
