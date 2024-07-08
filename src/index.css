@@ -322,6 +322,13 @@ h2 {
   opacity: 0.5;
 }
 
+h3 {
+  color: #3282b8;
+  /* font-size: 1.5rem; */
+  text-align: center;
+  opacity: 0.5;
+}
+
 p {
   color: #a6b1e1;
   opacity: 0.5;
@@ -438,6 +445,10 @@ svg:hover {
   background: black;
   border-radius: 50%;
   z-index: 1000;
+}
+
+.maxw {
+  max-width: 80%;
 }
 .loader:after {
   content: "";
@@ -577,12 +588,24 @@ svg:hover {
   padding-bottom: 10rem;
   flex-direction: column;
   align-items: center;
-  align-content: space-between;
+  align-content: space-around;
 }
 
 .container-languages {
-  height: auto;
-  width: auto;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.two3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
 }
 
 #name {
@@ -651,6 +674,7 @@ svg:hover {
 
 .small-title3 {
   margin: 0;
+
   opacity: 1;
 }
 
@@ -697,6 +721,20 @@ svg:hover {
 }
 
 .profile {
+  border-radius: 15px;
+  height: auto;
+  width: 20rem;
+}
+
+.two2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.profile-pic {
   border-radius: 15px;
   height: auto;
   width: 20rem;
@@ -858,8 +896,19 @@ svg:hover {
 @media (min-width: 961px) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
 
+  .maxw {
+    max-width: 50%;
+  }
+  .two3 {
+    flex-direction: row;
+  }
+
   .side {
     text-align: center;
+  }
+
+  .container-languages {
+    flex-direction: column;
   }
 
   .main1 {
@@ -898,6 +947,10 @@ svg:hover {
     flex-direction: row;
     padding: 2rem 0 1rem 0;
     height: auto;
+  }
+
+  .container-expertise {
+    flex-direction: column;
   }
 
   nav {
