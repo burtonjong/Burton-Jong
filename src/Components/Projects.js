@@ -2,6 +2,7 @@ import ProjectShowcase from "./ProjectShowcase";
 import project1 from "../images/project1.png";
 import project2 from "../images/project2.png";
 import project3 from "../images/project3.png";
+import project4 from "../images/project4.jpg";
 
 export default function Projects() {
   return (
@@ -16,6 +17,16 @@ export default function Projects() {
       </div>
 
       <div className="container-showcase flex wrap jc-center column">
+        <ProjectShowcase
+          name="Poker Spreadsheet and Planner"
+          picture={project4}
+          link="https://github.com/burtonjong/spreadsheet-planner"
+        >
+          A fullstack group project that utilizes{" "}
+          <span className="keywords">AWS Amplify Gen 2</span> for ease of
+          authorization, authentication, and deployment. This app was created
+          for me and my friends to track our winnings (or losses).
+        </ProjectShowcase>
         <ProjectShowcase
           name="Lyric Generator"
           picture={project1}
